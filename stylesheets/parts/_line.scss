@@ -1,0 +1,77 @@
+/********************************
+ ラインアニメーション
+*********************************/
+.line,
+.line-100 {
+  display: block;
+  position: relative;
+}
+
+.line::after {
+  background: #552400;
+  bottom: -20px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 1.2s 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 1.2s 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 0;
+}
+
+.line.inview::after {
+  width: 100px;
+}
+
+@media (min-width: 960px) {
+  .line::after {
+    height: 2px;
+  }
+
+  .line.inview::after {
+    width: 137px;
+  }
+}
+
+.line-100::after {
+  background: #552400;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  width: 0;
+}
+
+.line-100.inview::after {
+  width: 100%;
+}
+
+.line-200::after {
+  background: #552400;
+  bottom: -20px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 1.6s 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 1.6s 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 0;
+}
+
+.line-200.inview::after {
+  top: 0;
+  width: 1px;
+  height: 100px;
+}

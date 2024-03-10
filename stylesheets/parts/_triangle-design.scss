@@ -1,0 +1,26 @@
+@use "../globals" as *;
+/*
+ * 参考サイト
+ * https://gorigoricode.com/pseudo-element-triangle/
+ *
+*/
+
+.triangle {
+  position: relative;
+  background: #00CC99;
+  color: #fff;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.triangle::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border-top: 20px solid #00CC99;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+}

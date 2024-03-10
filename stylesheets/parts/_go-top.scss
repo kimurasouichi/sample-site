@@ -1,0 +1,29 @@
+@use "../globals" as *;
+
+.go-top {
+  border: none;
+  width: 50px;
+  height: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 5%;
+  opacity: 0;
+  z-index: 50;
+  visibility: hidden;
+  transition: 0.5s;
+
+  &__inner {
+    background: #3AABD3;
+    border-radius: 50%;
+    padding: 15px 0;
+    box-shadow: inset 0 5px 15px 0 rgba(205, 202, 202, 0.1);
+  }
+
+  &__icon {
+    text-align: center;
+
+    &::after {
+      color: $cWhite;
+    }
+  }
+}

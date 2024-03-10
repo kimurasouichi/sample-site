@@ -1,0 +1,134 @@
+@use "../globals/" as *;
+
+/* メニュースクロールイベントの際に使用 */
+// #header {
+//   transition: 0.5s;
+// }
+
+.content-wrap {
+  &__inner {
+    @include mq(xxl) {
+      height: 100vh;
+    }
+  }
+}
+
+
+/********************************
+  ヘッダー
+********************************/
+
+.header {
+  background: linear-gradient(to bottom right, #00ff33, #ffffff);
+  @include mq(xxl){
+    height: 30vh;
+  }
+  &.triggered {
+    .header {
+      &__wrapper {
+        transition: background-color 0.3s;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+      }
+
+      &__wrap {
+        margin: 0 25px auto;
+        @extend .h-content-width;
+
+        @include mq(md) {
+          margin: 0;
+          margin: 0 auto;
+        }
+      }
+
+      &__content {
+        padding-top: $navHeight-150;
+      }
+    }
+  }
+
+  h2 {
+    font-weight: 500;
+    align-items: center;
+    line-height: 1.7;
+    padding: 10px 0 30px;
+    font-size: clamp(0.938rem, 0.11rem + 3.68vw, 1.875rem);
+
+    @include mq(lg) {
+      font-size: 50px;
+    }
+  }
+
+  nav {
+    width: 45%;
+    max-width: 500px;
+  }
+
+  ul {
+    justify-content: space-between;
+    font-size: 18px;
+
+    a {
+      font-weight: 500;
+
+      @include mq(lg) {
+        font-size: 35px;
+      }
+    }
+  }
+
+  &__inner {
+    @extend .h-content-width;
+    font-weight: 500;
+  }
+
+  &__wrapper {}
+
+  &__wrap {
+    font-weight: 500;
+    font-family: 'Noto Serif', serif;
+    justify-content: space-between;
+    height: $navHeight-100;
+
+    @include mq(lg) {
+      height: $navHeight-150;
+    }
+  }
+
+  &__logo {
+    width: 80%;
+    max-width: max-content;
+
+    @include mq(md) {
+      width: 40%;
+    }
+
+    @include mq(lg) {
+      width: 55%;
+    }
+
+    img {
+      width: 20%;
+      max-width: 46px;
+
+      @include mq(lg) {
+        max-width: 86px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      margin-left: 20px;
+
+      @include mq(lg) {
+        font-size: 50px
+      }
+    }
+  }
+}

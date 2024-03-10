@@ -1,0 +1,291 @@
+@use "../globals" as *;
+
+/* fontAwesome */
+.fa-angle-right,
+.fa-arrow-right,
+.fa-arrow-up,
+
+.fa-building,
+
+.fa-caret-right,
+.fa-check,
+.fa-checkbox,
+.fa-comment,
+.fa-circle-chevron-right,
+.fa-calendar,
+
+.fa-dash,
+
+.fa-file,
+
+.fa-login,
+
+.fa-message,
+.fa-mobile,
+.fa-mail,
+.fa-mobile,
+.fa-map,
+.fa-mail-circle,
+
+.fa-play,
+.fa-photo,
+.fa-pen,
+.fa-pc,
+.fa-parking,
+
+.fa-tel,
+.fa-tel-left,
+.fa-train,
+
+.fa-user,
+
+.fa-walking {
+
+  &::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+  }
+
+  &::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+  }
+}
+
+.fa-caret-right {
+  &::before {
+    content: "";
+  }
+
+  &::after {
+    content: "\f0da";
+  }
+}
+
+.fa-calendar {
+  &::before {
+    content: "\f073";
+  }
+}
+
+.fa-pen {
+  &::before {
+    content: "\f304";
+  }
+}
+
+.fa-mobile {
+  &::before {
+    content: "\f3cf";
+
+  }
+}
+
+.fa-tel-left {
+  &::before {
+    content: "\f879";
+
+  }
+}
+
+.fa-angle-up {
+  &::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+  }
+}
+
+.fa-checkbox {
+  &::before {
+    content: "\f14a";
+  }
+}
+
+.fa-angle-up {
+  &::before {
+    content: "";
+  }
+
+  &::after {
+    content: "\f106";
+  }
+
+}
+
+.fa-mail-circle {
+  &::before {
+    content: "\e10c";
+  }
+}
+
+.fa-user {
+  &::before {
+    content: "\f2bd";
+  }
+}
+
+.fa-play {
+  &::before {
+    content: "\f04b";
+  }
+}
+
+.fa-circle-chevron-right {
+  &::before {
+    content: "\f138";
+  }
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-blogger,
+.fa-twitter,
+.fa-line {
+  &::before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 900;
+
+  }
+}
+
+.fa-instagram {
+  &::before {
+    content: "\f16d";
+  }
+}
+
+.fa-line {
+  &::before {
+    content: "\f3c0";
+  }
+}
+
+.fa-twitter {
+  &::before {
+    content: "\f099";
+  }
+}
+
+.fa-angle-right {
+  &::before {
+    content: "";
+  }
+
+  &::after {
+    content: "\f105";
+  }
+}
+
+.building {
+  &::before {
+    content: "\f1ad";
+  }
+}
+
+.fa-train {
+  &::before {
+    content: "\f239";
+  }
+}
+
+.fa-map {
+  &::before {
+    content: "\f3c5";
+  }
+}
+
+.fa-mobile {
+  &::before {
+    content: "\f3cd";
+  }
+}
+
+.fa-dash {
+  position: relative;
+
+  &::after {
+    content: "\f068";
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.fa-mail {
+
+  &::before {
+    content: "\f0e0";
+  }
+}
+
+.fa-tel {
+  &::before {
+    content: "\f095";
+  }
+}
+
+.fa-check {
+  &::before {
+    color: rgb(51, 86, 144);
+    content: "\f14a";
+  }
+}
+
+.fa-pc {
+  position: relative;
+
+  &::before {
+    content: "\f109";
+  }
+}
+
+.fa-login {
+
+  &::before {
+    content: "\f406";
+  }
+}
+
+.fa-file {
+  &::before {
+    content: "\f15c";
+  }
+}
+
+.fa-comment {
+
+  &::before {
+    content: "\f4ad"
+  }
+}
+
+.fa-photo {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "\f87c";
+    margin: 0;
+    padding-top: 5px;
+  }
+}
+
+.fa-arrow-right {
+  &::after {
+    content: "\f061";
+  }
+}
+
+.fa-walking {
+  &::before {
+    content: "\f554";
+  }
+}
+
+.fa-parking {
+  &::before {
+    content: "\f540";
+  }
+}

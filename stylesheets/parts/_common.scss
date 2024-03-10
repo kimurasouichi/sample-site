@@ -1,0 +1,321 @@
+/******************************************************************
+
+StyleSheet: ベーススタイル
+
+******************************************************************/
+
+@use "../globals" as *;
+
+// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 0.02em;
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.fixed-hide {
+  transform: translateY(-100px);
+}
+
+#global-container {
+
+  // display: none;
+}
+
+#container {
+  overflow: hidden;
+}
+
+.wrap {
+  margin: 0 25px auto;
+
+  @include mq(lg) {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/********************************
+ 共通クラス
+*********************************/
+.main-ttl {
+  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, -0.421rem + 7.43vw, 3.125rem);
+  text-align: center;
+  margin-bottom: 50px;
+
+  span {
+    @include mq(lg) {
+      font-size: 100px;
+    }
+  }
+}
+
+.sub-title {
+  span {
+    font-weight: bold;
+  }
+}
+
+.com-btn {
+  background-color: $cWhite;
+  font-weight: bold;
+  width: 100%;
+  color: $cBlack;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  border: 1px solid $cBlack;
+  margin: 0 auto;
+}
+
+
+/********************************
+ 余白
+*********************************/
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-140 {
+  margin-bottom: 140px;
+}
+
+/* margin-right */
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+
+
+/********************************
+ カラー
+*********************************/
+/* color */
+.c-blue {
+  color: $cBlue;
+}
+
+/* bg-color */
+.bg-blue {
+  background-color: $cBlue;
+}
+
+.bg-black {
+  background-color: $cBlack;
+}
+
+/********************************
+ ディスプレイ用
+*********************************/
+
+.xl-block {
+  display: none;
+
+  @include mq(xl) {
+    display: block;
+  }
+}
+
+.lg-flex {
+  display: none;
+
+  @include mq(lg) {
+    display: flex;
+  }
+}
+
+.lg-block {
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.lg-none {
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.md-flex {
+  display: none !important;
+
+  @include mq(md) {
+    display: flex !important;
+  }
+}
+
+.md-none {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.md-block {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.sm-none {
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.sm-block {
+  display: none;
+
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+
+/********************************
+ 共通クラス
+*********************************/
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+/* font-weight */
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+
+/********************************
+ 微調整
+*********************************/
+.ls-100 {
+  letter-spacing: -0.5px;
+
+  @include mq(sm) {
+    letter-spacing: normal;
+  }
+}
+
+.ls-200 {
+  letter-spacing: -1px;
+
+  @include mq(sm) {
+    letter-spacing: normal;
+  }
+}
+
+.ls-300 {
+  letter-spacing: -1.5px;
+
+  @include mq(sm) {
+    letter-spacing: normal;
+  }
+}
+
+.ls-400 {
+  @include mq(lg) {
+    letter-spacing: -1px;
+  }
+}

@@ -1,0 +1,160 @@
+@use "../globals" as *;
+
+$cMenuClose: $cBlack;
+$cMenuOpen: $cBlack;
+
+
+.mobile-menu {
+  &__span {
+    color: $cBlack;
+    display: block;
+    font-size: x-small;
+    text-align: center;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    &>span {
+      background-color: $cMenuClose;
+      // width: 35px;
+      width: 25px;
+      height: 2px;
+      display: block;
+      margin-bottom: 9px;
+      transition: transform 0.5s;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+
+  ul {
+    align-items: center;
+    line-height: 2.5;
+    height: 100%;
+    justify-content: space-between;
+
+    @include mq(md) {
+      flex-direction: row;
+    }
+  }
+
+  li {
+    a {
+      @include mq(lg) {
+        font-size: 35px;
+      }
+    }
+  }
+
+  span {
+    @include mq(lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__inner {
+    height: calc(100vh - 200px);
+    font-weight: 500;
+    font-family: 'Noto Serif', serif;
+    align-items: center;
+    row-gap: 30px;
+    padding: 100px 0;
+    @extend .content-width;
+
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: last baseline;
+    }
+
+    @include mq(lg) {
+      padding: 50px 0 100px;
+    }
+  }
+
+  &__box {
+    row-gap: 50px;
+    height: 40%;
+
+    @include mq(md) {
+      row-gap: 20px;
+      width: 50%;
+      max-width: 250px;
+    }
+
+    @include mq(lg) {
+      width: 100%;
+      max-width: max-content;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 20%;
+      max-width: 46px;
+
+      @include mq(lg) {
+        max-width: 86px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      margin-left: 20px;
+
+      @include mq(lg) {
+        font-size: 50px
+      }
+    }
+  }
+}
+
+.menu-open {
+  .menu {
+    transition: 0.5s;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #hero,
+  main,
+  footer {
+    display: none;
+  }
+
+  & .mobile-menu {
+    &__btn {
+      &>span {
+        background-color: $cMenuOpen;
+
+        &:nth-child(1) {
+          transition-delay: 70ms;
+          transform: translateY(11px) rotate(135deg);
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0s;
+          transform: translateX(-18px) scaleX(0);
+        }
+
+        &:nth-child(3) {
+          transition-delay: 140ms;
+          transform: translateY(-11px) rotate(-135deg);
+        }
+      }
+    }
+  }
+}

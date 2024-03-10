@@ -1,0 +1,133 @@
+@use "../../globals" as *;
+
+#top {
+  .info {
+    h3 {
+      overflow: hidden;
+      font-size: clamp(1.25rem, 0.693rem + 2.48vw, 1.875rem);
+      font-weight: 500;
+      max-width: max-content;
+
+      @include mq(lg) {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      @include mq(lg) {
+        line-height: 2;
+        font-size: 30px;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      &:nth-child(1) {
+        transition-delay: 1s;
+      }
+
+      @include mq(md) {
+        aspect-ratio: 1/0.7;
+      }
+    }
+
+    &__cover {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $cBlack;
+    }
+
+    &__inner {
+      row-gap: 50px;
+      padding-bottom: 25px;
+
+      @include mq(lg) {
+        padding-bottom: 50px;
+      }
+    }
+
+    &__wrapper {
+
+      @include mq(lg) {
+        row-gap: 50px;
+      }
+    }
+
+
+    &__wrap {
+      &:nth-of-type(odd) {
+        background: #f8f8f8;
+
+        @include mq(md) {
+          .info {
+            &__txt {
+              order: 2;
+            }
+
+            &__imd {
+              order: 1;
+            }
+          }
+        }
+
+      }
+
+      &:nth-of-type(4) {
+        .info {
+          &__txt {
+            h3 {
+              @include mq(lg) {
+                font-size: 40px;
+              }
+
+              @include mq(xl) {
+                font-size: 50px;
+                width: 110%;
+                max-width: max-content;
+              }
+            }
+          }
+        }
+      }
+
+      &-inner {
+        row-gap: 30px;
+        @extend .content-width;
+        padding: 50px 0;
+
+        @include mq(md) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        @include mq(lg) {
+          padding: 80px 0;
+        }
+      }
+    }
+
+
+
+    &__txt {
+      row-gap: 30px;
+      line-height: 2;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+    }
+
+    &__img {
+
+      @include mq(md) {
+        max-width: 507px;
+        width: 45%;
+      }
+    }
+  }
+}

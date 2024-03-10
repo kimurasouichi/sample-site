@@ -1,0 +1,118 @@
+.frog {
+  transform-origin: center bottom;
+  animation: yurayura 2s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes yurayura {
+
+  0%,
+  100% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes yurayura-200 {
+
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+.shiny {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 0) 0%);
+
+    /* アニメーション */
+    animation-name: shiny;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes shiny {
+  0% {
+    transform: scale(0) rotate(25deg);
+    opacity: 0;
+
+  }
+
+  30% {
+    transform: scale(0) rotate(25deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1) rotate(25deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(50) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+// go-top
+.fadeIn {
+  animation: fadeIn 1s ease-in-out 1 normal forwards,
+}
+
+@keyframes fadeIn {
+
+  /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+  0% {
+    opacity: 0;
+  }
+
+  /* 始め */
+  100% {
+    opacity: 1;
+  }
+
+  /* 終わり */
+}
+
+
+@keyframes showTextBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showTextTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

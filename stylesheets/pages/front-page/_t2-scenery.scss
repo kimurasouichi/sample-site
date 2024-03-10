@@ -1,0 +1,54 @@
+@use "../../globals/" as *;
+
+#top {
+  .scenery {
+    &__inner {
+      row-gap: 50px;
+      padding: 25px 0 50px;
+
+      @include mq(lg) {
+        row-gap: 150px;
+        padding: 50px 0 100px;
+      }
+    }
+
+    &__box {
+      background: #f8f8f8;
+
+      &-inner {
+        padding: 50px 0;
+        row-gap: 30px;
+        @extend .content-width;
+
+        @include mq(md) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        @include mq(lg) {
+          margin-top: -200px;
+          padding: 100px 0 200px;
+        }
+      }
+    }
+
+    &__img {
+      @include mq(md) {
+        aspect-ratio: 1/0.5;
+        width: 48%;
+      }
+
+      @include mq(lg) {
+        width: 24%;
+        aspect-ratio: 1/1.5;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

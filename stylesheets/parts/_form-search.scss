@@ -1,0 +1,20 @@
+@use "../globals" as *;
+
+form {
+  display: flex;
+  height: fit-content;
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: $cWhite;
+
+  input[type="text"] {
+    background: none;
+    border: none;
+  }
+
+  button {
+    background-color: rgba(239, 231, 217, 0.5);
+    border: none;
+  }
+}

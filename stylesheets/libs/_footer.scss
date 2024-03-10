@@ -1,0 +1,80 @@
+@use "../globals/" as *;
+
+.footer {
+  ul {
+    align-items: center;
+    line-height: 2.5;
+
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  li {
+    a {
+      @include mq(lg) {
+        font-size: 35px;
+      }
+    }
+  }
+
+  span {
+    @include mq(lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__inner {
+    font-weight: 500;
+    font-family: 'Noto Serif', serif;
+    align-items: center;
+    row-gap: 30px;
+    padding: 25px 0 50px;
+    @extend .content-width;
+
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: last baseline;
+    }
+
+    @include mq(lg) {
+      padding: 50px 0 100px;
+    }
+  }
+
+  &__box {
+    @include mq(md) {
+      row-gap: 20px;
+      width: 50%;
+      max-width: 250px;
+    }
+
+    @include mq(lg) {
+      width: 100%;
+      max-width: max-content;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 20%;
+      max-width: 46px;
+
+      @include mq(lg) {
+        max-width: 86px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      margin-left: 20px;
+
+      @include mq(lg) {
+        font-size: 50px
+      }
+    }
+  }
+}

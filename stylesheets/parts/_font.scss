@@ -1,0 +1,39 @@
+@use "../globals/" as *;
+
+// font
+.font-sm {
+  font-size: 10px;
+
+  @include mq(sm) {
+    font-size: 12px;
+  }
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 12px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.font-lr {
+  font-weight: 500;
+  font-size: 16px;
+
+  @include mq(lg) {
+    font-size: 24px;
+  }
+}
+
+.font-lg {
+  font-size: 25px;
+
+  @include mq(lg) {
+    font-size: 36px;
+  }
+}

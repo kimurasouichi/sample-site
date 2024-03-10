@@ -1,0 +1,38 @@
+@use "../globals" as *;
+
+/*
+@ [ ]
+@ ボックスに上記のようなデザインを設定する
+*/
+
+.box-design {
+  &::before {
+    content: "";
+    left: 0;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 15px;
+    height: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid #E67300;
+    border-width: 1px 0px 1px 1px;
+  }
+
+  &::after {
+    content: "";
+    right: 0;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 15px;
+    height: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid #E67300;
+    border-width: 1px 1px 1px 0px;
+  }
+}

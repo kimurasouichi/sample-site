@@ -1,0 +1,83 @@
+@use "../globals/" as *;
+
+
+.side {
+  width: 15%;
+  position: fixed;
+  top: 70%;
+  transition: all 0.3s ease;
+
+  .animate-title {
+    display: none;
+  }
+
+
+  &.left {
+    left: 50px;
+    transform: translateX(-50px);
+
+    &.inview {
+      transform: none;
+      
+      .animate-title {
+        display: block;
+      }
+    }
+
+    .side__inner {
+      transform-origin: top left;
+      transform: rotate(-90deg);
+      justify-content: space-between;
+    }
+
+    a {
+      font-size: 14px;
+      color: $cBlack;
+    }
+  }
+
+  &.right {
+    right: 50px;
+    transition: 0.5s;
+
+    &.inview {
+      transform: none;
+      opacity: 1;
+
+      .animate-title {
+        display: block;
+      }
+    }
+
+    & .side__inner {
+      text-align: center;
+      transform-origin: top right;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.icon {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 1em;
+    height: 1em;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.twitter::before {
+    background-image: url(../../images/icon/x.png);
+  }
+
+  &.fb::before {
+    background-image: url(../../images/icon/facebook.png);
+  }
+}
